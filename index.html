@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Movie Booking</title>
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        /* .active, .dot:hover {
+            background-color: #717171;
+        } */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+    <section class="top-bar">
+        <div class="left-content">
+            <h2 class="title">MovieHunt</h2>
+            <ul class="navigation">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="i.html">Theaters</a></li>
+            </ul>
+        </div>
+        <div class="right-content">
+            <img src="./assets/images/filter.png" alt="" class="filter">
+            <div class="profile-img-box">
+                <img src="./assets/images/pro.jpeg" alt="">
+            </div>
+            <img src="./assets/images/menu.png" alt="" class="menu">
+        </div>
+    </section>
+    <section class="main-container">
+        <div class="sidebar">
+            <form id="filterForm">
+                <div class="sidebar-groups">
+                    <h3 class="sg-title">Categories</h3>
+                    <input type="checkbox" id="adventure" name="category" value="adventure">
+                    <label for="adventure">Adventure</label><br>
+                    <input type="checkbox" id="action" name="category" value="action">
+                    <label for="action">Action</label><br>
+                    <input type="checkbox" id="animation" name="category" value="animation">
+                    <label for="animation">Animation</label><br>
+                    <input type="checkbox" id="comedy" name="category" value="comedy">
+                    <label for="comedy">Comedy</label><br>
+                    <input type="checkbox" id="scifi" name="category" value="scifi">
+                    <label for="scifi">Science Fiction</label><br>
+                    <input type="checkbox" id="thriller" name="category" value="thriller">
+                    <label for="thriller">Thriller</label><br>
+                    <input type="checkbox" id="romance" name="category" value="romance">
+                    <label for="romance">Romance</label><br>
+                    <input type="checkbox" id="documentary" name="category" value="documentary">
+                    <label for="documentary">Documentary</label><br>
+                    <input type="checkbox" id="fantasy" name="category" value="fantasy">
+                    <label for="fantasy">Fantasy</label><br>
+                </div>
+                <div class="sidebar-groups">
+                    <h3 class="sg-title">Language</h3>
+                    <input type="checkbox" id="english" name="language" value="english">
+                    <label for="english">English</label><br>
+                    <input type="checkbox" id="hindi" name="language" value="hindi">
+                    <label for="hindi">Hindi</label><br>
+                    <input type="checkbox" id="telugu" name="language" value="telugu">
+                    <label for="telugu">Telugu</label><br>
+                </div>
+                <div class="sidebar-groups">
+                    <button type="submit" class="btn-l btn">Apply Filters</button>
+                </div>
+            </form>
+        </div>
+        <div class="movies-container">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="upcoming-img-box">
+                        <img src="assets/images/dune2.jpeg" alt="">
+                        <p class="upcoming-title">Upcoming Movies</p>
+                        <div class="buttons">
+                            <a href="https://en.wikipedia.org/wiki/Dune:_Part_Two" class="btn">Dune 2</a>
+                            <a href="https://www.youtube.com/watch?v=_YUzQa_1RCE" class="btn-alt btn">Play Trailer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="upcoming-img-box">
+                        <img src="assets/images/joker2.jpeg" alt="">
+                        <p class="upcoming-title">Upcoming Movies</p>
+                        <div class="buttons">
+                            <a href="https://en.wikipedia.org/wiki/Joker:_Folie_%C3%A0_Deux" class="btn">Joker 2</a>
+                            <a href="https://www.youtube.com/watch?v=_OKAwz2MsJs" class="btn-alt btn">Play Trailer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="upcoming-img-box">
+                        <img src="assets/images/thefallguy.jpeg" alt="">
+                        <p class="upcoming-title">Upcoming Movies</p>
+                        <div class="buttons">
+                            <a href="https://en.wikipedia.org/wiki/The_Fall_Guy_(2024_film)" class="btn">The Fall Guy</a>
+                            <a href="https://www.youtube.com/watch?v=j7jPnwVGdZ8" class="btn-alt btn">Play Trailer</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            <div class="current-movies">
+                <div class="current-movie" data-category="scifi" data-language="english"> 
+                    <div class="cm-img-box">
+                        <img src="assets/images/arrival.jpeg" alt="">
+                    </div>
+                    <h3 class="movie-title">Arrival</h3>
+                    <p class="Language">Language : English</p>
+                    <p class="category">Category : Sci-Fi</p>
+                    <div class="booking">
+                        <h2 class="price">15$</h2>
+                        <a href="#" class="btn buy-tickets">Buy Tickets</a>
+                      </div>
+                </div>
+                <div class="current-movie" data-category="thriller" data-language="english">
+                    <div class="cm-img-box">
+                        <img src="assets/images/thecommuter.jpeg" alt="">
+                    </div>
+                    <h3 class="movie-title">The Commuter</h3>
+                    <p class="Language">Language : English</p>
+                    <p class="category">Category : Thriller</p>
+                    <div class="booking">
+                        <h2 class="price">15$</h2>
+                        <a href="#" class="btn buy-tickets">Buy Tickets</a>
+                      </div>
+                </div>
+                <div class="current-movie" data-category="Romance" data-language="telugu">
+                    <div class="cm-img-box">
+                        <img src="assets/images/arjunreddy.jpeg" alt="">
+                    </div>
+                    <h3 class="movie-title">Arjun Reddy</h3>
+                    <p class="Language">Language : Telugu</p>
+                    <p class="category">Category : Romance</p>
+                    <div class="booking">
+                        <h2 class="price">15$</h2>
+                        <a href="#" class="btn buy-tickets">Buy Tickets</a>
+                      </div>
+                </div>
+                <div class="current-movie" data-category="action" data-language="english">
+                    <div class="cm-img-box">
+                        <img src="assets/images/johnwick.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">JohnWick 3</h3>
+                    <p class="Language">Language : English</p>
+                    <p class="category">Category : Action</p>
+                    <div class="booking">
+                        <h2 class="price">15$</h2>
+                        <a href="#" class="btn buy-tickets">Buy Tickets</a>
+                      </div>
+                </div>
+                <div class="current-movie" data-category="Animation" data-language="english">
+                    <div class="cm-img-box">
+                        <img src="assets/images/yourname.jpeg" alt="">
+                    </div>
+                    <h3 class="movie-title">Your Name</h3>
+                    <p class="Language">Language : English</p>
+                    <p class="category">Category : Animation</p>
+                    <div class="booking">
+                        <h2 class="price">15$</h2>
+                        <a href="#" class="btn buy-tickets">Buy Tickets</a>
+                      </div>
+                </div>
+                <div class="current-movie" data-category="adventure" data-language="telugu">
+                    <div class="cm-img-box">
+                        <img src="assets/images/bahubali.jpeg" alt="">
+                    </div>
+                    <h3 class="movie-title">Bahubali</h3>
+                    <p class="Language">Language : Telugu</p>
+                    <p class="category">Category : Adventure</p>
+                    <div class="booking">
+                        <h2 class="price">15$</h2>
+                        <a href="#" class="btn buy-tickets">Buy Tickets</a>
+                      </div>
+                </div>
+                <div class="current-movie" data-category="action" data-language="hindi">
+                    <div class="cm-img-box">
+                        <img src="assets/images/kill.jpeg" alt="">
+                    </div>
+                    <h3 class="movie-title">Kill</h3>
+                    <p class="Language">Language : Hindi</p>
+                    <p class="category">Category : Action</p>
+                    <div class="booking">
+                        <h2 class="price">15$</h2>
+                        <a href="#" class="btn buy-tickets">Buy Tickets</a>
+                      </div>
+                </div>
+                <div class="current-movie" data-category="comedy" data-language="english">
+                    <div class="cm-img-box">
+                        <img src="assets/images/dict.jpeg" alt="">
+                    </div>
+                    <h3 class="movie-title">The Dictator</h3>
+                    <p class="Language">Language : English</p>
+                    <p class="category">Category : Comedy</p>
+                    <div class="booking">
+                        <h2 class="price">15$</h2>
+                        <a href="#" class="btn buy-tickets">Buy Tickets</a>
+                      </div>
+                </div>
+                <div class="current-movie" data-category="Documentary" data-language="hindi">
+                    <div class="cm-img-box">
+                        <img src="assets/images/sachin.jpeg" alt="">
+                    </div>
+                    <h3 class="movie-title">Sachin</h3>
+                    <p class="Language">Language : Hindi</p>
+                    <p class="category">Category : Documentary</p>
+                    <div class="booking">
+                        <h2 class="price">15$</h2>
+                        <a href="#" class="btn buy-tickets">Buy Tickets</a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

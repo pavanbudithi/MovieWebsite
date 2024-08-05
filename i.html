@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="theaters.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Ticket Booking</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Book Your Tickets</h2>
+            <form id="bookingForm">
+                <label for="location">Select Location:</label>
+                <select id="location" required>
+                    <option value="" disabled selected>Select your location</option>
+                    <option value="Lubbock">Lubbock</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+                
+                <label for="theater">Select Theater:</label>
+                <select id="theater" required>
+                    <option value="" disabled selected>Select a theater</option>
+                </select>
+                
+                <label for="movie">Select Movie:</label>
+                <select id="movie" required>
+                    <option value="" disabled selected>Select a movie</option>
+                </select>
+                
+                    
+                <a href="booking.html" class="btn">Buy Tickets</a>
+                
+            </form>
+        </div>
+    </main>
+    <script src="theaters.js"></script>
+</body>
+</html>
